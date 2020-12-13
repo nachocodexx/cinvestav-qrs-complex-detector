@@ -1,0 +1,22 @@
+version: "3"
+services:
+  qrs-00:
+    image: nachocode/cinvestav-qrs-complex-detector:latest
+    environment:
+      BOOTSTRAP_SERVERS: "ec2-3-90-166-46.compute-1.amazonaws.com:9092,ec2-54-91-17-192.compute-1.amazonaws.com:9093"
+      CONSUMER_TOPIC: "s00"
+      PRODUCER_TOPIC: "db"
+      GROUP_ID: "g0"
+  qrs-01:
+    image: nachocode/cinvestav-qrs-complex-detector:latest
+    environment:
+      BOOTSTRAP_SERVERS: "ec2-3-90-166-46.compute-1.amazonaws.com:9092,ec2-54-91-17-192.compute-1.amazonaws.com:9093"
+      CONSUMER_TOPIC: "s00"
+      PRODUCER_TOPIC: "db"
+      GROUP_ID: "g1"
+  # qrs-01:
+  #   image: nachocode/cinvestav-qrs-complex-detector:latest
+  #   environment:
+  #     BOOTSTRAP_SERVERS: "ec2-3-90-166-46.compute-1.amazonaws.com:9092,ec2-54-91-17-192.compute-1.amazonaws.com:9093"
+  #     CONSUMER_TOPIC: "s00"
+  #     PRODUCER_TOPIC: "db"

@@ -1,0 +1,5 @@
+*.log
+src/logs/
+src/plots/
+*.pyc
+*/__pycache__/
